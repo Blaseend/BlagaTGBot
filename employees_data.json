@@ -1,0 +1,17 @@
+{
+  "managers": [
+    {
+      "telegram_login": "Тестовый руководитель",
+      "employees": [
+        {"masterID": 573742, "name": "Иванов Иван"},
+        {"masterID": 67890, "name": "Петров Петр"}
+      ]
+    },
+    {
+      "telegram_login": "Тестовый руководитель",
+      "employees": [
+        {"masterID": 892037, "name": "Гоша"}
+      ]
+    }
+  ]
+}
