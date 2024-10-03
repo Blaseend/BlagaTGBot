@@ -8,9 +8,23 @@
       ]
     },
     {
-      "telegram_login": "Тестовый руководитель",
+      "telegram_login": "@enigmamasha",
       "employees": [
-        {"masterID": 892037, "name": "Гоша"}
+        {"masterID": 280543, "name": "Алена"},
+        {"masterID": 488575, "name": "Влад"},
+        {"masterID": 493220, "name": "Настя"},
+        {"masterID": 517144, "name": "Женя"},
+        {"masterID": 477568, "name": "Надя"},
+        {"masterID": 870174, "name": "Альбина"},
+        {"masterID": 863784, "name": "Рита"},
+        {"masterID": 609716, "name": "Дима"},
+        {"masterID": 280178, "name": "Софья"},
+        {"masterID": 297825, "name": "Ильнур"},
+        {"masterID": 209482, "name": "Никита"},
+        {"masterID": 879171, "name": "Вика"},
+        {"masterID": 875703, "name": "Артем"},
+        {"masterID": 663149, "name": "Инна"},
+        {"masterID": 892037, "name": "Катя"}
       ]
     }
   ]
