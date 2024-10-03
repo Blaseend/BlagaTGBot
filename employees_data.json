@@ -26,6 +26,40 @@
         {"masterID": 663149, "name": "Инна"},
         {"masterID": 892037, "name": "Катя"}
       ]
+    },
+    {
+      "telegram_login": "@Apudovov",
+      "employees": [
+        {"masterID": 474348, "name": "v.pudov"},
+        {"masterID": 446531, "name": "v.k.rudenko"},
+        {"masterID": 481905, "name": "n.lenko"},
+        {"masterID": 539028, "name": "m.lisnik"},
+        {"masterID": 33780, "name": "a.s.gubanov"},
+        {"masterID": 557960, "name": "k.m.kravchenko"},
+        {"masterID": 558260, "name": "se.a.semenov"},
+        {"masterID": 495321, "name": "al.tonkonogov"},
+        {"masterID": 589473, "name": "i.zaikina"},
+        {"masterID": 374470, "name": "r.zhigaylov"},
+        {"masterID": 468047, "name": "e.dobrenko"},
+        {"masterID": 6901065, "name": "a.dorechkina"},
+        {"masterID": 540804, "name": "i.i.nazarova"},
+        {"masterID": 499928, "name": "e.shipshova"},
+        {"masterID": 480870, "name": "a.abibillauulu"}
+      ]
+    },
+    {
+      "telegram_login": "@Kisynich",
+      "employees": [
+        {"masterID": 609340, "name": "Илья"},
+        {"masterID": 6901859, "name": "Настя"},
+        {"masterID": 251759, "name": "Дима"},
+        {"masterID": 478631, "name": "Аня"},
+        {"masterID": 626420, "name": "Тоня"},
+        {"masterID": 619299, "name": "Вера"},
+        {"masterID": 398963, "name": "Ира"},
+        {"masterID": 615470, "name": "Вероника"},
+        {"masterID": 235256, "name": "Полина"}
+      ]
     }
   ]
 }
