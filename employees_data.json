@@ -28,6 +28,26 @@
       ]
     },
     {
+  "telegram_login": "Костя",
+  "employees": [
+    {"masterID": 460933, "name": "m.gotina"},
+    {"masterID": 212145, "name": "alek.a.borisov"},
+    {"masterID": 200895, "name": "e.vylko"},
+    {"masterID": 615157, "name": "d.dubrovskaya"},
+    {"masterID": 584467, "name": "d.zhernakov"},
+    {"masterID": 162368, "name": "a.libernikel"},
+    {"masterID": 247506, "name": "k.mikhaylyukova"},
+    {"masterID": 573199, "name": "a.a.polshchikov"},
+    {"masterID": 872693, "name": "n.tulyakova"},
+    {"masterID": 170918, "name": "an.yarantseva"},
+    {"masterID": 594422, "name": "e.s.volodchenko"},
+    {"masterID": 145877, "name": "a.v.butasova"},
+    {"masterID": 885322, "name": "a.e.golub"},
+    {"masterID": 438102, "name": "s.v.lyuev"},
+    {"masterID": 540712, "name": "a.mesnyankina"}
+  ]
+},
+{
       "telegram_login": "@Apudovov",
       "employees": [
         {"masterID": 474348, "name": "v.pudov"},
