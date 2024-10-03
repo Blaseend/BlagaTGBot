@@ -48,7 +48,7 @@
       ]
     },
     {
-      "telegram_login": "@Kisynich",
+      "telegram_login": "Kisynich",
       "employees": [
         {"masterID": 609340, "name": "Илья"},
         {"masterID": 6901859, "name": "Настя"},
@@ -59,6 +59,26 @@
         {"masterID": 398963, "name": "Ира"},
         {"masterID": 615470, "name": "Вероника"},
         {"masterID": 235256, "name": "Полина"}
+      ]
+    },
+    {
+      "telegram_login": "@gsvirkov",
+      "employees": [
+        {"masterID": 464297, "name": "Агеенкова Кристина"},
+        {"masterID": 462973, "name": "Харитонова Валерия"},
+        {"masterID": 464298, "name": "Вострова Екатерина"},
+        {"masterID": 471765, "name": "Бутенко Герман"},
+        {"masterID": 471739, "name": "Шибела Наталья"},
+        {"masterID": 576337, "name": "Гостищева Анастасия"},
+        {"masterID": 577675, "name": "Доценко Ангелина"},
+        {"masterID": 550145, "name": "Могильникова Анна"},
+        {"masterID": 750425, "name": "Лукашина Алёна"},
+        {"masterID": 292207, "name": "Березовский Александр"},
+        {"masterID": 815569, "name": "Кретинин Никита"},
+        {"masterID": 806063, "name": "Баскаков Андрей"},
+        {"masterID": 774901, "name": "Муллер Яна"},
+        {"masterID": 145651, "name": "Воронина Анна"},
+        {"masterID": 879822, "name": "Грязева Алина"}
       ]
     }
   ]
