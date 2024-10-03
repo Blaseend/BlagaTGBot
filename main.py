@@ -113,7 +113,9 @@ async def schedule_parsing():
     employees = await load_data()
     while True:
         try:
+            await bot.send_message(GROUP_CHAT_ID, "Начинаем цикл поиска")
             await parse_pages(employees["managers"])
+            await bot.send_message(GROUP_CHAT_ID, "Цикл поиска завершен")
         except Exception as e:
             await send_error_message(f"Ошибка при циклическом запуске парсинга: {str(e)}")
         await asyncio.sleep(3600)
