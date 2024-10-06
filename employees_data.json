@@ -3,8 +3,8 @@
     {
       "telegram_login": "Тестовый руководитель",
       "employees": [
-        {"masterID": 573742, "name": "Иванов Иван"},
-        {"masterID": 67890, "name": "Петров Петр"}
+        {"masterID": 445945, "name": "Товарный знак внизу страницы"},
+        {"masterID": 1470, "name": "Блага из main class=layout-wrapper"}
       ]
     },
     {
@@ -28,26 +28,26 @@
       ]
     },
     {
-  "telegram_login": "Костя",
-  "employees": [
-    {"masterID": 460933, "name": "m.gotina"},
-    {"masterID": 212145, "name": "alek.a.borisov"},
-    {"masterID": 200895, "name": "e.vylko"},
-    {"masterID": 615157, "name": "d.dubrovskaya"},
-    {"masterID": 584467, "name": "d.zhernakov"},
-    {"masterID": 162368, "name": "a.libernikel"},
-    {"masterID": 247506, "name": "k.mikhaylyukova"},
-    {"masterID": 573199, "name": "a.a.polshchikov"},
-    {"masterID": 872693, "name": "n.tulyakova"},
-    {"masterID": 170918, "name": "an.yarantseva"},
-    {"masterID": 594422, "name": "e.s.volodchenko"},
-    {"masterID": 145877, "name": "a.v.butasova"},
-    {"masterID": 885322, "name": "a.e.golub"},
-    {"masterID": 438102, "name": "s.v.lyuev"},
-    {"masterID": 540712, "name": "a.mesnyankina"}
-  ]
-},
-{
+      "telegram_login": "Костя",
+      "employees": [
+        {"masterID": 460933, "name": "m.gotina"},
+        {"masterID": 212145, "name": "alek.a.borisov"},
+        {"masterID": 200895, "name": "e.vylko"},
+        {"masterID": 615157, "name": "d.dubrovskaya"},
+        {"masterID": 584467, "name": "d.zhernakov"},
+        {"masterID": 162368, "name": "a.libernikel"},
+        {"masterID": 247506, "name": "k.mikhaylyukova"},
+        {"masterID": 573199, "name": "a.a.polshchikov"},
+        {"masterID": 872693, "name": "n.tulyakova"},
+        {"masterID": 170918, "name": "an.yarantseva"},
+        {"masterID": 594422, "name": "e.s.volodchenko"},
+        {"masterID": 145877, "name": "a.v.butasova"},
+        {"masterID": 885322, "name": "a.e.golub"},
+        {"masterID": 438102, "name": "s.v.lyuev"},
+        {"masterID": 540712, "name": "a.mesnyankina"}
+      ]
+    },
+    {
       "telegram_login": "@Apudovov",
       "employees": [
         {"masterID": 474348, "name": "v.pudov"},
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "telegram_login": "Kisynich",
+      "telegram_login": "@Kisynich",
       "employees": [
         {"masterID": 609340, "name": "Илья"},
         {"masterID": 6901859, "name": "Настя"},
@@ -99,6 +99,27 @@
         {"masterID": 774901, "name": "Муллер Яна"},
         {"masterID": 145651, "name": "Воронина Анна"},
         {"masterID": 879822, "name": "Грязева Алина"}
+      ]
+    },
+    {
+      "telegram_login": "@Ksenya_Lysykh",
+      "employees": [
+        {"masterID": 498094, "name": "Ляшенко Валерия"},
+        {"masterID": 500836, "name": "Абросимов Роман"},
+        {"masterID": 502117, "name": "Полуэктова Анжела"},
+        {"masterID": 502117, "name": "Соколова Ангелина"},
+        {"masterID": 447915, "name": "Есиков Александр"},
+        {"masterID": 445244, "name": "Морозова Татьяна"},
+        {"masterID": 441328, "name": "Скопкарёв Иван"},
+        {"masterID": 489890, "name": "Гульцева Дарья"},
+        {"masterID": 488732, "name": "Осипенко Данил"},
+        {"masterID": 601683, "name": "Шостенко Кристина"},
+        {"masterID": 564235, "name": "Саркисян Анна"},
+        {"masterID": 629896, "name": "Сергиенко Мария"},
+        {"masterID": 859833, "name": "Белоцерковец Анастасия"},
+        {"masterID": 252125, "name": "Кравченко Герман"},
+        {"masterID": 358569, "name": "Луговский Сергей"},
+        {"masterID": 881612, "name": "Калиберда Виталий"}
       ]
     }
   ]
