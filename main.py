@@ -77,13 +77,26 @@ async def find_text_in_review(session, review_url, employees, semaphore, sent_li
         try:
             async with session.get(full_url) as response:
                 text = await response.text()
-                for manager in employees:
-                    for employee in manager['employees']:
-                        master_id = employee['masterID']
-                        name = employee['name']
-                        if str(master_id) in text:
-                            await notify_about_thanks(master_id, name, full_url, manager['telegram_login'], sent_links)
-                            break
+                soup = BeautifulSoup(text, 'html.parser')
+
+                # Находим нужный фрагмент страницы - элемент <main> с классом "layout-wrapper"
+                main_content = soup.find('main', class_="layout-wrapper")
+                
+                if main_content:
+                    # Преобразуем содержимое <main> в текст
+                    main_text = main_content.get_text()
+
+                    # Выполняем поиск по этому тексту
+                    for manager in employees:
+                        for employee in manager['employees']:
+                            master_id = employee['masterID']
+                            name = employee['name']
+                            if str(master_id) in main_text:
+                                await notify_about_thanks(master_id, name, full_url, manager['telegram_login'], sent_links)
+                                break
+                else:
+                    await send_error_message(f"Не удалось найти <main> на странице {full_url}")
+
         except Exception as e:
             await send_error_message(f"Ошибка парсинга {full_url}: {str(e)}")
 
