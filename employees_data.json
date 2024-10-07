@@ -3,8 +3,7 @@
     {
       "telegram_login": "Тестовый руководитель",
       "employees": [
-        {"masterID": 445945, "name": "Товарный знак внизу страницы"},
-        {"masterID": 1470, "name": "Блага из main class=layout-wrapper"}
+        {"masterID": 445945, "name": "Если вылезла эта блага - это очень плохо :)"}
       ]
     },
     {
@@ -121,6 +120,29 @@
         {"masterID": 358569, "name": "Луговский Сергей"},
         {"masterID": 881612, "name": "Калиберда Виталий"}
       ]
-    }
+    },
+{
+  "telegram_login": "@MariannaFilimonova",
+  "employees": [
+    {"masterID": 640146, "name": "Тарон"},
+    {"masterID": 698755, "name": "Ирина"},
+    {"masterID": 447567, "name": "Виталий"},
+    {"masterID": 887568, "name": "Леонид"},
+    {"masterID": 447898, "name": "Оксана"},
+    {"masterID": 443517, "name": "Юлия"},
+    {"masterID": 604652, "name": "Екатерина"},
+    {"masterID": 599207, "name": "Анастасия"},
+    {"masterID": 617438, "name": "Алина"},
+    {"masterID": 906305, "name": "Елена"},
+    {"masterID": 315258, "name": "Марина"},
+    {"masterID": 150773, "name": "Андрей"},
+    {"masterID": 285487, "name": "Мария"},
+    {"masterID": 877297, "name": "Ксения"},
+    {"masterID": 239277, "name": "Диана"},
+    {"masterID": 286619, "name": "Дарья"},
+    {"masterID": 880687, "name": "Екатерина"},
+    {"masterID": 885134, "name": "Мария"}
+  ]
+}
   ]
 }
