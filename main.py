@@ -136,7 +136,7 @@ async def schedule_parsing():
 
 async def send_startup_message():
     try:
-        await bot.send_message(GROUP_CHAT_ID, "Я обновился и стал меньше тупить")
+        await bot.send_message(GROUP_CHAT_ID, "Тестовый запуск")
     except Exception as e:
         await send_error_message(f"Ошибка при отправке стартового сообщения: {str(e)}")
 
