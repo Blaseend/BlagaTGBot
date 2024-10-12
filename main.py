@@ -10,7 +10,7 @@ import os
 
 API_TOKEN = '7876727440:AAEhQz8z73OfqRj5numlxrVh0tjMEgoXAI0'
 GROUP_CHAT_ID = '-1002321901390'
-USER_CHAT_ID = '@un_unu_un'  # Укажите здесь ваш Telegram ID
+USER_CHAT_ID = '908619661'  # Укажите здесь ваш Telegram ID
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
