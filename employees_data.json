@@ -121,28 +121,89 @@
         {"masterID": 881612, "name": "Калиберда Виталий"}
       ]
     },
-{
-  "telegram_login": "@MariannaFilimonova",
-  "employees": [
-    {"masterID": 640146, "name": "Тарон"},
-    {"masterID": 698755, "name": "Ирина"},
-    {"masterID": 447567, "name": "Виталий"},
-    {"masterID": 887568, "name": "Леонид"},
-    {"masterID": 447898, "name": "Оксана"},
-    {"masterID": 443517, "name": "Юлия"},
-    {"masterID": 604652, "name": "Екатерина"},
-    {"masterID": 599207, "name": "Анастасия"},
-    {"masterID": 617438, "name": "Алина"},
-    {"masterID": 906305, "name": "Елена"},
-    {"masterID": 315258, "name": "Марина"},
-    {"masterID": 150773, "name": "Андрей"},
-    {"masterID": 285487, "name": "Мария"},
-    {"masterID": 877297, "name": "Ксения"},
-    {"masterID": 239277, "name": "Диана"},
-    {"masterID": 286619, "name": "Дарья"},
-    {"masterID": 880687, "name": "Екатерина"},
-    {"masterID": 885134, "name": "Мария"}
-  ]
-}
+    {
+      "telegram_login": "@o77777o",
+      "employees": [
+        {"masterID": 870661, "name": "v.prokopchenko"},
+        {"masterID": 608508, "name": "y.smychenko"},
+        {"masterID": 578391, "name": "vi.a.galkina"},
+        {"masterID": 237147, "name": "k.boloniy"},
+        {"masterID": 872625, "name": "a.d.kamaeva"},
+        {"masterID": 423236, "name": "n.chavkin"},
+        {"masterID": 383454, "name": "i.kostelov"},
+        {"masterID": 869694, "name": "m.sheshukov"},
+        {"masterID": 512676, "name": "d.nikin"},
+        {"masterID": 599963, "name": "e.v.malysheva"}
+      ]
+    },
+    {
+      "telegram_login": "@cheese_ka84",
+      "employees": [
+        {"masterID": 616314, "name": "andyamova"},
+        {"masterID": 589376, "name": "kurganskaya"},
+        {"masterID": 545788, "name": "baranova"},
+        {"masterID": 334432, "name": "gabitova"},
+        {"masterID": 283773, "name": "gots"},
+        {"masterID": 600054, "name": "denisenko"},
+        {"masterID": 403925, "name": "zelenov"},
+        {"masterID": 640799, "name": "zozina"},
+        {"masterID": 869591, "name": "ivashneva"},
+        {"masterID": 38156, "name": "kudryashova"},
+        {"masterID": 812862, "name": "mirnov"},
+        {"masterID": 583829, "name": "nagimova"},
+        {"masterID": 6910717, "name": "pavlova"},
+        {"masterID": 878634, "name": "potapov"},
+        {"masterID": 822601, "name": "sabitov"},
+        {"masterID": 494693, "name": "sergunina"},
+        {"masterID": 621618, "name": "stenshina"},
+        {"masterID": 899072, "name": "shigapova"}
+      ]
+    },
+    {
+      "telegram_login": "@zems_tanya",
+      "employees": [
+        {"masterID": 897732, "name": "balandina"},
+        {"masterID": 623329, "name": "butkov"},
+        {"masterID": 872194, "name": "davydov"},
+        {"masterID": 822539, "name": "ignatova"},
+        {"masterID": 585404, "name": "maloletneva"},
+        {"masterID": 6904506, "name": "korelova"},
+        {"masterID": 443635, "name": "kuznetsov"},
+        {"masterID": 569649, "name": "borunova"},
+        {"masterID": 6900762, "name": "ozolina"},
+        {"masterID": 867467, "name": "kanaeva"},
+        {"masterID": 718954, "name": "kononov"},
+        {"masterID": 419900, "name": "kubanova"},
+        {"masterID": 272634, "name": "kychakova"},
+        {"masterID": 870059, "name": "laryushina"},
+        {"masterID": 149775, "name": "levit"},
+        {"masterID": 874340, "name": "popova"},
+        {"masterID": 761588, "name": "sochnev"},
+        {"masterID": 338194, "name": "teplova"}
+      ]
+    },
+    {
+      "telegram_login": "@MariannaFilimonova",
+      "employees": [
+        {"masterID": 640146, "name": "Тарон"},
+        {"masterID": 698755, "name": "Ирина"},
+        {"masterID": 447567, "name": "Виталий"},
+        {"masterID": 887568, "name": "Леонид"},
+        {"masterID": 447898, "name": "Оксана"},
+        {"masterID": 443517, "name": "Юлия"},
+        {"masterID": 604652, "name": "Екатерина"},
+        {"masterID": 599207, "name": "Анастасия"},
+        {"masterID": 617438, "name": "Алина"},
+        {"masterID": 906305, "name": "Елена"},
+        {"masterID": 315258, "name": "Марина"},
+        {"masterID": 150773, "name": "Андрей"},
+        {"masterID": 285487, "name": "Мария"},
+        {"masterID": 877297, "name": "Ксения"},
+        {"masterID": 239277, "name": "Диана"},
+        {"masterID": 286619, "name": "Дарья"},
+        {"masterID": 880687, "name": "Екатерина"},
+        {"masterID": 885134, "name": "Мария"}
+      ]
+    }
   ]
 }
