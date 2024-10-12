@@ -80,6 +80,11 @@ async def find_text_in_review(session, review_url, employees, semaphore, sent_li
                 text = await response.text()
                 soup = BeautifulSoup(text, 'html.parser')
 
+                # Находим и удаляем элемент <div> с классом "lf4cbd87d ld6d46e58 lb9ca4d21"
+                ignored_element = soup.find('div', class_="lf4cbd87d ld6d46e58 lb9ca4d21")
+                if ignored_element:
+                    ignored_element.decompose()  # Удаляем элемент из DOM
+
                 # Находим нужный фрагмент страницы - элемент <main> с классом "layout-wrapper"
                 main_content = soup.find('main', class_="layout-wrapper")
                 
@@ -100,6 +105,7 @@ async def find_text_in_review(session, review_url, employees, semaphore, sent_li
 
         except Exception as e:
             await send_error_message(f"Ошибка парсинга {full_url}: {str(e)}")
+
 
 async def parse_page(session, url, employees, semaphore, sent_links):
     try:
