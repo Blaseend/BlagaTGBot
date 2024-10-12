@@ -10,13 +10,14 @@ import os
 
 API_TOKEN = '7876727440:AAEhQz8z73OfqRj5numlxrVh0tjMEgoXAI0'
 GROUP_CHAT_ID = '-1002321901390'
+USER_CHAT_ID = '@un_unu_un'  # Укажите здесь ваш Telegram ID
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
 async def send_shutdown_message(reason):
     try:
-        await bot.send_message(GROUP_CHAT_ID, f"Ой-ой, я неожиданно выключился. Включить меня может только @un_unu_un. Причина: {reason}")
+        await bot.send_message(USER_CHAT_ID, f"Ой-ой, я неожиданно выключился. Причина: {reason}")
     except Exception as e:
         print(f"Не удалось отправить сообщение об остановке: {e}")
 
@@ -53,7 +54,7 @@ def load_sent_links():
 
 async def send_error_message(error_message):
     try:
-        await bot.send_message(GROUP_CHAT_ID, f"Ошибка: {error_message}")
+        await bot.send_message(USER_CHAT_ID, f"Ошибка: {error_message}")
     except Exception as e:
         print(f"Не удалось отправить сообщение об ошибке в Telegram: {e}")
 
@@ -126,9 +127,9 @@ async def schedule_parsing():
     employees = await load_data()
     while True:
         try:
-            await bot.send_message(GROUP_CHAT_ID, "Начинаем цикл поиска")
+            await bot.send_message(USER_CHAT_ID, "Начинаем цикл поиска")  # Сообщение вам о начале цикла
             await parse_pages(employees["managers"])
-            await bot.send_message(GROUP_CHAT_ID, "Цикл поиска завершен")
+            await bot.send_message(USER_CHAT_ID, "Цикл поиска завершен")  # Сообщение вам о завершении цикла
         except Exception as e:
             await send_error_message(f"Ошибка при циклическом запуске парсинга: {str(e)}")
         await asyncio.sleep(3600)
