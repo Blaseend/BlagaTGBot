@@ -208,12 +208,12 @@
 {
       "telegram_login": "@ppugachevaa",
       "employees": [
-        {"masterID": Полина Пугачева, "name": ""},
-        {"masterID": Полины Пугачевой, "name": ""},
-        {"masterID": Полине Пугачевой, "name": ""},
-        {"masterID": Полину Пугачеву, "name": ""},
-        {"masterID": Полиной Пугачевой, "name": ""},
-        {"masterID": Полине Пугачевой, "name": ""}
+        {"masterID": "Полина Пугачева", "name": ""},
+        {"masterID": "Полины Пугачевой", "name": ""},
+        {"masterID": "Полине Пугачевой", "name": ""},
+        {"masterID": "Полину Пугачеву", "name": ""},
+        {"masterID": "Полиной Пугачевой", "name": ""},
+        {"masterID": "Полине Пугачевой", "name": ""}
       ]
     },
     {
