@@ -182,6 +182,29 @@
         {"masterID": 338194, "name": "teplova"}
       ]
     },
+{
+      "telegram_login": "@benerevanski",
+      "employees": [
+        {"masterID": 574469, "name": "Ольга"},
+        {"masterID": 573742, "name": "Сания"},
+        {"masterID": 563056, "name": "Александр"},
+        {"masterID": 366878, "name": "Михаил"},
+        {"masterID": 593179, "name": "Виталий"},
+        {"masterID": 601611, "name": "Пашкин"},
+        {"masterID": 485758, "name": "Екатерина"},
+        {"masterID": 872517, "name": "Анастасия"},
+        {"masterID": 853137, "name": "Александра"},
+        {"masterID": 796036, "name": "Вероника"},
+        {"masterID": 370136, "name": "София"},
+        {"masterID": 550046, "name": "Сабина"},
+        {"masterID": 745964, "name": "Виктория"},
+        {"masterID": 898281, "name": "Артем"},
+        {"masterID": 129849, "name": "Ксения"},
+        {"masterID": 283555, "name": "Анна"},
+        {"masterID": 870863, "name": "Дмитрий"},
+        {"masterID": 107980, "name": "Олеся"}
+      ]
+    },
     {
       "telegram_login": "@MariannaFilimonova",
       "employees": [
