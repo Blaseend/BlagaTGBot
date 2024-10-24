@@ -10,7 +10,7 @@ import os
 
 API_TOKEN = '7876727440:AAEhQz8z73OfqRj5numlxrVh0tjMEgoXAI0'
 GROUP_CHAT_ID = '-1002321901390'
-USER_CHAT_ID = '908619661'  # Укажите здесь ваш Telegram ID
+USER_CHAT_ID = '908619661'  # Telegram ID
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -80,19 +80,19 @@ async def find_text_in_review(session, review_url, employees, semaphore, sent_li
                 text = await response.text()
                 soup = BeautifulSoup(text, 'html.parser')
 
-                # Находим и удаляем элемент <div> с классом "lf4cbd87d ld6d46e58 lb9ca4d21"
+                # <div> с классом "lf4cbd87d ld6d46e58 lb9ca4d21"
                 ignored_element = soup.find('div', class_="lf4cbd87d ld6d46e58 lb9ca4d21")
                 if ignored_element:
                     ignored_element.decompose()  # Удаляем элемент из DOM
 
-                # Находим нужный фрагмент страницы - элемент <main> с классом "layout-wrapper"
+                # <main> с классом "layout-wrapper"
                 main_content = soup.find('main', class_="layout-wrapper")
                 
                 if main_content:
-                    # Преобразуем содержимое <main> в текст
+                    #  <main> в текст
                     main_text = main_content.get_text()
 
-                    # Выполняем поиск по этому тексту
+                    # Выполняем поиск 
                     for manager in employees:
                         for employee in manager['employees']:
                             master_id = employee['masterID']
