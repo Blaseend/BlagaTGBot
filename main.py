@@ -142,7 +142,8 @@ async def schedule_parsing():
 
 async def send_startup_message():
     try:
-        await bot.send_message(GROUP_CHAT_ID, "Тестовый запуск")
+        file_id = "CAACAgIAAxkBAAICemcb4CRF3xph4u6El4k_q2T_Er6zAAJCRAACMTNJS2iiZaxSRU60NgQ"
+        await bot.send_sticker(GROUP_CHAT_ID, file_id)
     except Exception as e:
         await send_error_message(f"Ошибка при отправке стартового сообщения: {str(e)}")
 
