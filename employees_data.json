@@ -122,20 +122,30 @@
       ]
     },
     {
-      "telegram_login": "@o77777o",
-      "employees": [
-        {"masterID": 870661, "name": "v.prokopchenko"},
-        {"masterID": 608508, "name": "y.smychenko"},
-        {"masterID": 578391, "name": "vi.a.galkina"},
-        {"masterID": 237147, "name": "k.boloniy"},
-        {"masterID": 872625, "name": "a.d.kamaeva"},
-        {"masterID": 423236, "name": "n.chavkin"},
-        {"masterID": 383454, "name": "i.kostelov"},
-        {"masterID": 869694, "name": "m.sheshukov"},
-        {"masterID": 512676, "name": "d.nikin"},
-        {"masterID": 599963, "name": "e.v.malysheva"}
-      ]
-    },
+  "telegram_login": "@o77777o",
+  "employees": [
+    {"masterID": 870661, "name": "v.prokopchenko"},
+    {"masterID": 608508, "name": "y.smychenko"},
+    {"masterID": 578391, "name": "vi.a.galkina"},
+    {"masterID": 237147, "name": "k.boloniy"},
+    {"masterID": 872625, "name": "a.d.kamaeva"},
+    {"masterID": 423236, "name": "n.chavkin"},
+    {"masterID": 383454, "name": "i.kostelov"},
+    {"masterID": 869694, "name": "m.sheshukov"},
+    {"masterID": 512676, "name": "d.nikin"},
+    {"masterID": 599963, "name": "e.v.malysheva"},
+    {"masterID": 619922, "name": "m.gudzovskiy"},
+    {"masterID": 895844, "name": "p.shveykova"},
+    {"masterID": 789442, "name": "and.i.ivanov"},
+    {"masterID": 578784, "name": "k.malvinova"},
+    {"masterID": 596388, "name": "m.kobushko"},
+    {"masterID": 545746, "name": "g.budnikov"},
+    {"masterID": 708566, "name": "z.m.gulieva"},
+    {"masterID": 622166, "name": "d.s.chernyshev"},
+    {"masterID": 271465, "name": "r.abdulatipov"},
+    {"masterID": 541095, "name": "d.smolin"}
+  ]
+},
     {
       "telegram_login": "@cheese_ka84",
       "employees": [
