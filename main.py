@@ -3,17 +3,197 @@ import aiohttp
 import asyncio
 import signal
 import sys
-from aiogram import Bot, Dispatcher
+import os
+from aiogram import Bot, Dispatcher, types
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram.dispatcher import FSMContext
+from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.utils import executor
 from bs4 import BeautifulSoup
-import os
 
 API_TOKEN = '7876727440:AAEhQz8z73OfqRj5numlxrVh0tjMEgoXAI0'
 GROUP_CHAT_ID = '-1002321901390'
-USER_CHAT_ID = '908619661'  # Telegram ID
+USER_CHAT_ID = '908619661'
 
 bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot)
+storage = MemoryStorage()
+dp = Dispatcher(bot, storage=storage)
+
+# Создаем состояния для FSM
+class Form(StatesGroup):
+    select_manager = State()
+    select_employee = State()
+    select_action = State()
+    edit_name = State()
+    edit_master_id = State()
+    new_employee_name = State()
+    new_employee_master_id = State()
+
+# Вспомогательные функции для работы с JSON
+async def load_data():
+    try:
+        if os.path.exists('employees_data.json'):
+            with open('employees_data.json', 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return {"managers": []}
+    except Exception as e:
+        print(f"Error loading data: {e}")
+        return {"managers": []}
+
+async def save_data(data):
+    try:
+        with open('employees_data.json', 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+        return True
+    except Exception as e:
+        print(f"Error saving data: {e}")
+        return False
+
+# Обработчики команд
+@dp.message_handler(commands=['start'])
+async def cmd_start(message: types.Message):
+    await Form.select_manager.set()
+    data = await load_data()
+    markup = types.InlineKeyboardMarkup()
+    
+    for manager in data['managers']:
+        markup.add(types.InlineKeyboardButton(
+            text=manager['telegram_login'],
+            callback_data=f"manager_{manager['telegram_login']}"
+        ))
+    
+    await message.answer("Выбери РГ для редактирования:", reply_markup=markup)
+
+@dp.callback_query_handler(lambda c: c.data.startswith('manager_'), state=Form.select_manager)
+async def process_manager(callback_query: types.CallbackQuery, state: FSMContext):
+    manager_login = callback_query.data.split('_')[1]
+    await state.update_data(selected_manager=manager_login)
+    
+    data = await load_data()
+    manager = next((m for m in data['managers'] if m['telegram_login'] == manager_login), None)
+    
+    if manager:
+        markup = types.InlineKeyboardMarkup()
+        for employee in manager['employees']:
+            markup.add(types.InlineKeyboardButton(
+                text=employee['name'],
+                callback_data=f"employee_{employee['name']}"
+            ))
+        markup.add(types.InlineKeyboardButton(
+            text="Добавить нового сотрудника ➕",
+            callback_data="add_employee"
+        ))
+        
+        await Form.select_employee.set()
+        await bot.send_message(
+            callback_query.from_user.id,
+            "Выбери существующего сотрудника или добавь нового:",
+            reply_markup=markup
+        )
+    await callback_query.answer()
+
+@dp.callback_query_handler(lambda c: c.data.startswith('employee_'), state=Form.select_employee)
+async def process_employee(callback_query: types.CallbackQuery, state: FSMContext):
+    employee_name = callback_query.data.split('_')[1]
+    await state.update_data(selected_employee=employee_name)
+    
+    markup = types.InlineKeyboardMarkup()
+    markup.add(types.InlineKeyboardButton("Редактировать ✏️", callback_data="action_edit"))
+    markup.add(types.InlineKeyboardButton("Удалить ❌", callback_data="action_delete"))
+    
+    await Form.select_action.set()
+    await bot.send_message(
+        callback_query.from_user.id,
+        f"Выбран сотрудник: {employee_name}",
+        reply_markup=markup
+    )
+    await callback_query.answer()
+
+@dp.callback_query_handler(lambda c: c.data == 'add_employee', state=Form.select_employee)
+async def add_employee(callback_query: types.CallbackQuery, state: FSMContext):
+    await Form.new_employee_name.set()
+    await bot.send_message(
+        callback_query.from_user.id,
+        "Введите имя нового сотрудника:"
+    )
+    await callback_query.answer()
+
+@dp.message_handler(state=Form.new_employee_name)
+async def process_new_employee_name(message: types.Message, state: FSMContext):
+    await state.update_data(new_employee_name=message.text)
+    await Form.new_employee_master_id.set()
+    await message.answer("Введите masterID нового сотрудника:")
+
+@dp.message_handler(state=Form.new_employee_master_id)
+async def process_new_employee_master_id(message: types.Message, state: FSMContext):
+    try:
+        master_id = int(message.text)
+        user_data = await state.get_data()
+        data = await load_data()
+        
+        manager = next((m for m in data['managers'] if m['telegram_login'] == user_data['selected_manager']), None)
+        if manager:
+            manager['employees'].append({
+                "masterID": master_id,
+                "name": user_data['new_employee_name']
+            })
+            if await save_data(data):
+                await message.answer("✅ Сотрудник успешно добавлен!")
+            else:
+                await message.answer("❌ Ошибка при сохранении данных")
+        await state.finish()
+    except ValueError:
+        await message.answer("❌ MasterID должен быть числом! Попробуйте снова:")
+
+@dp.callback_query_handler(lambda c: c.data.startswith('action_'), state=Form.select_action)
+async def process_action(callback_query: types.CallbackQuery, state: FSMContext):
+    action = callback_query.data.split('_')[1]
+    user_data = await state.get_data()
+    
+    if action == 'edit':
+        await Form.edit_name.set()
+        await bot.send_message(
+            callback_query.from_user.id,
+            "Введите новое имя сотрудника:"
+        )
+    elif action == 'delete':
+        data = await load_data()
+        manager = next((m for m in data['managers'] if m['telegram_login'] == user_data['selected_manager']), None)
+        if manager:
+            manager['employees'] = [e for e in manager['employees'] if e['name'] != user_data['selected_employee']]
+            if await save_data(data):
+                await bot.send_message(callback_query.from_user.id, "✅ Сотрудник успешно удален!")
+            else:
+                await bot.send_message(callback_query.from_user.id, "❌ Ошибка при сохранении данных")
+        await state.finish()
+    await callback_query.answer()
+
+@dp.message_handler(state=Form.edit_name)
+async def process_edit_name(message: types.Message, state: FSMContext):
+    await state.update_data(new_name=message.text)
+    await Form.edit_master_id.set()
+    await message.answer("Введите новый masterID:")
+
+@dp.message_handler(state=Form.edit_master_id)
+async def process_edit_master_id(message: types.Message, state: FSMContext):
+    try:
+        new_master_id = int(message.text)
+        user_data = await state.get_data()
+        data = await load_data()
+        
+        manager = next((m for m in data['managers'] if m['telegram_login'] == user_data['selected_manager']), None)
+        if manager:
+            employee = next((e for e in manager['employees'] if e['name'] == user_data['selected_employee']), None)
+            if employee:
+                employee['name'] = user_data['new_name']
+                employee['masterID'] = new_master_id
+                if await save_data(data):
+                    await message.answer("✅ Данные сотрудника успешно обновлены!")
+                else:
+                    await message.answer("❌ Ошибка при сохранении данных")
+        await state.finish()
+    except ValueError:
+        await message.answer("❌ MasterID должен быть числом! Попробуйте снова:")
 
 async def send_shutdown_message(reason):
     try:
@@ -150,9 +330,7 @@ async def send_startup_message():
 async def on_startup(_):
     await send_startup_message()
     asyncio.create_task(schedule_parsing())
-
 if __name__ == '__main__':
     signal.signal(signal.SIGTERM, handle_exit)
     signal.signal(signal.SIGINT, handle_exit)
-
     executor.start_polling(dp, on_startup=on_startup, skip_updates=True)
