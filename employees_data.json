@@ -67,7 +67,7 @@
       ]
     },
     {
-      "telegram_login": "@Kisynich",
+      "telegram_login": "@Polonskaia_1",
       "employees": [
         {"masterID": 609340, "name": "Илья"},
         {"masterID": 6901859, "name": "Настя"},
@@ -247,6 +247,10 @@
         {"masterID": 286619, "name": "Дарья"},
         {"masterID": 880687, "name": "Екатерина"},
         {"masterID": 885134, "name": "Мария"}
+      ]
+    },
+     "telegram_login": "@Kisynich",
+      "employees": [
       ]
     }
   ]
