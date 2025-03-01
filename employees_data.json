@@ -140,71 +140,6 @@
             ]
         },
         {
-            "telegram_login": "@Apudovov",
-            "employees": [
-                {
-                    "masterID": 474348,
-                    "name": "v.pudov"
-                },
-                {
-                    "masterID": 446531,
-                    "name": "v.k.rudenko"
-                },
-                {
-                    "masterID": 481905,
-                    "name": "n.lenko"
-                },
-                {
-                    "masterID": 539028,
-                    "name": "m.lisnik"
-                },
-                {
-                    "masterID": 33780,
-                    "name": "a.s.gubanov"
-                },
-                {
-                    "masterID": 557960,
-                    "name": "k.m.kravchenko"
-                },
-                {
-                    "masterID": 558260,
-                    "name": "se.a.semenov"
-                },
-                {
-                    "masterID": 495321,
-                    "name": "al.tonkonogov"
-                },
-                {
-                    "masterID": 589473,
-                    "name": "i.zaikina"
-                },
-                {
-                    "masterID": 374470,
-                    "name": "r.zhigaylov"
-                },
-                {
-                    "masterID": 468047,
-                    "name": "e.dobrenko"
-                },
-                {
-                    "masterID": 6901065,
-                    "name": "a.dorechkina"
-                },
-                {
-                    "masterID": 540804,
-                    "name": "i.i.nazarova"
-                },
-                {
-                    "masterID": 499928,
-                    "name": "e.shipshova"
-                },
-                {
-                    "masterID": 480870,
-                    "name": "a.abibillauulu"
-                }
-            ]
-        },
-        {
             "telegram_login": "@Polonskaia_1",
             "employees": [
                 {
@@ -376,91 +311,6 @@
                 {
                     "masterID": 881612,
                     "name": "Калиберда Виталий"
-                }
-            ]
-        },
-        {
-            "telegram_login": "@o77777o",
-            "employees": [
-                {
-                    "masterID": 870661,
-                    "name": "v.prokopchenko"
-                },
-                {
-                    "masterID": 608508,
-                    "name": "y.smychenko"
-                },
-                {
-                    "masterID": 578391,
-                    "name": "vi.a.galkina"
-                },
-                {
-                    "masterID": 237147,
-                    "name": "k.boloniy"
-                },
-                {
-                    "masterID": 872625,
-                    "name": "a.d.kamaeva"
-                },
-                {
-                    "masterID": 423236,
-                    "name": "n.chavkin"
-                },
-                {
-                    "masterID": 383454,
-                    "name": "i.kostelov"
-                },
-                {
-                    "masterID": 869694,
-                    "name": "m.sheshukov"
-                },
-                {
-                    "masterID": 512676,
-                    "name": "d.nikin"
-                },
-                {
-                    "masterID": 599963,
-                    "name": "e.v.malysheva"
-                },
-                {
-                    "masterID": 619922,
-                    "name": "m.gudzovskiy"
-                },
-                {
-                    "masterID": 895844,
-                    "name": "p.shveykova"
-                },
-                {
-                    "masterID": 789442,
-                    "name": "and.i.ivanov"
-                },
-                {
-                    "masterID": 578784,
-                    "name": "k.malvinova"
-                },
-                {
-                    "masterID": 596388,
-                    "name": "m.kobushko"
-                },
-                {
-                    "masterID": 545746,
-                    "name": "g.budnikov"
-                },
-                {
-                    "masterID": 708566,
-                    "name": "z.m.gulieva"
-                },
-                {
-                    "masterID": 622166,
-                    "name": "d.s.chernyshev"
-                },
-                {
-                    "masterID": 271465,
-                    "name": "r.abdulatipov"
-                },
-                {
-                    "masterID": 541095,
-                    "name": "d.smolin"
                 }
             ]
         },
@@ -697,32 +547,7 @@
         },
         {
             "telegram_login": "@ppugachevaa",
-            "employees": [
-                {
-                    "masterID": "Полина Пугачева",
-                    "name": ""
-                },
-                {
-                    "masterID": "Полины Пугачевой",
-                    "name": ""
-                },
-                {
-                    "masterID": "Полине Пугачевой",
-                    "name": ""
-                },
-                {
-                    "masterID": "Полину Пугачеву",
-                    "name": ""
-                },
-                {
-                    "masterID": "Полиной Пугачевой",
-                    "name": ""
-                },
-                {
-                    "masterID": "Полине Пугачевой",
-                    "name": ""
-                }
-            ]
+            "employees": []
         },
         {
             "telegram_login": "@MariannaFilimonova",
