@@ -101,6 +101,7 @@ async def process_manager(callback_query: types.CallbackQuery, state: FSMContext
         )
         
         await Form.select_employee.set()
+        await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
         await bot.send_message(
             callback_query.from_user.id,
             "Выбери существующего сотрудника или добавь нового:",
@@ -123,6 +124,7 @@ async def back_to_managers(callback_query: types.CallbackQuery, state: FSMContex
             callback_data=f"manager_{safe_login}"
         ))
     
+    await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
     await bot.send_message(
         callback_query.from_user.id,
         "Выбери РГ для редактирования:",
@@ -147,6 +149,7 @@ async def process_employee(callback_query: types.CallbackQuery, state: FSMContex
         markup.add(types.InlineKeyboardButton("🔙 Назад", callback_data="back_to_employees"))
         
         await Form.select_action.set()
+        await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
         await bot.send_message(
             callback_query.from_user.id,
             f"Выбран сотрудник: {employee_name}",
@@ -181,6 +184,7 @@ async def back_to_employees(callback_query: types.CallbackQuery, state: FSMConte
         )
         
         await Form.select_employee.set()
+        await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
         await bot.send_message(
             callback_query.from_user.id,
             "Выбери существующего сотрудника или добавь нового:",
@@ -195,6 +199,7 @@ async def add_employee(callback_query: types.CallbackQuery, state: FSMContext):
     try:
         debug_log("Добавление нового сотрудника")
         await Form.new_employee_name.set()
+        await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
         await bot.send_message(
             callback_query.from_user.id,
             "Введите имя нового сотрудника:"
@@ -253,6 +258,7 @@ async def process_action(callback_query: types.CallbackQuery, state: FSMContext)
         
         if action == 'edit':
             await Form.edit_name.set()
+            await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
             await bot.send_message(
                 callback_query.from_user.id,
                 "Введите новое имя сотрудника:"
@@ -312,11 +318,11 @@ async def process_edit_master_id(message: types.Message, state: FSMContext):
 async def cancel_handler(callback_query: types.CallbackQuery, state: FSMContext):
     try:
         await state.finish()
+        await bot.delete_message(callback_query.from_user.id, callback_query.message.message_id)
         await bot.send_message(callback_query.from_user.id, "Операция отменена")
     except Exception as e:
         debug_log("Ошибка в cancel_handler", {"error": str(e)})
     await callback_query.answer()
-
 
 # Оригинальный код парсинга и уведомлений
 async def send_error_message(error_message):
